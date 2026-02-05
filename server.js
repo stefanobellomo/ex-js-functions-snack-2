@@ -29,13 +29,13 @@ console.log(quadrato(4));
 
 // SNACK 3
 
-let sottrazione = (a, b) => a - b
-let divisione = (a, b) => a / b
+// let sottrazione = (a, b) => a - b
+// let divisione = (a, b) => a / b
 
 const eseguiOperazione = (a, b, operazione) => operazione(a, b)
 
-console.log(eseguiOperazione(2, 2, sottrazione));
-console.log(eseguiOperazione(9, 3, divisione));
+// console.log(eseguiOperazione(2, 2, sottrazione));
+// console.log(eseguiOperazione(9, 3, divisione));
 
 // SNACK 4
 
@@ -97,15 +97,39 @@ const timer = eseguiEferma('questo è il messaggio', 1000, 5000)
 
 function contoAllaRovescia(numb) {
     const id = setInterval(() => {
-        console.log(numb);
+        // console.log(numb);
         numb--
 
         if (numb === 0) {
             clearInterval(id)
-            console.log('tempo scaduto');
+            // console.log('tempo scaduto');
         }
 
     }, 1000);
 }
 
 const intervallo = contoAllaRovescia(10)
+
+// SNACK 9
+
+function sequenzaOperazioni([addizione, sottrazione, divisione], tempo) {
+    setTimeout(() => {
+        // console.log('prima operazione');
+    }, tempo)
+    setTimeout(() => {
+        // console.log('seconda operazione');
+    }, tempo * 2)
+    setTimeout(() => {
+        // console.log('terza operazione');
+    }, tempo * 3)
+}
+
+sequenzaOperazioni([
+    () => console.log(addizione()),
+    () => console.log(sottrazione()),
+    () => console.log(divisione())
+], 2000);
+
+// SNACK 10
+
+
