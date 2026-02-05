@@ -68,7 +68,7 @@ function creaContatoreAutomatico(tempo) {
     return function () {
         const id = setInterval(() => {
             count++
-            console.log(count);
+            // console.log(count);
         }, tempo)
         return id
     }
@@ -81,8 +81,17 @@ setTimeout(() => clearInterval(id), 6000)
 
 // SNACK 7
 
+function eseguiEferma(message, start, stop) {
+    const id = setInterval(() => {
+        console.log(message);
+    }, start)
 
+    setTimeout(() => {
+        clearInterval(id)
+    }, stop)
+}
 
+const timer = eseguiEferma('questo è il messaggio', 1000, 5000)
 
 
 
