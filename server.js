@@ -40,7 +40,7 @@ console.log(eseguiOperazione(9, 3, divisione));
 // SNACK 4
 
 function creaTimer() {
-    console.log(('tempo scaduto'));
+    // console.log(('tempo scaduto'));
 }
 
 setTimeout(creaTimer, 4000)
@@ -49,7 +49,7 @@ setTimeout(creaTimer, 4000)
 
 function chiamami(messaggio) {
     return setInterval(() => {
-        console.log(messaggio);
+        // console.log(messaggio);
     }, 1000)
 }
 
@@ -57,8 +57,29 @@ const interval = chiamami('Ciao cane')
 
 setTimeout(() => {
     clearInterval(interval)
-    console.log('fine messaggio')
+    // console.log('fine messaggio')
 }, 5000)
+
+// SNACK 6
+
+let count = 0
+
+function creaContatoreAutomatico(tempo) {
+    return function () {
+        const id = setInterval(() => {
+            count++
+            console.log(count);
+        }, tempo)
+        return id
+    }
+}
+
+const contatore = creaContatoreAutomatico(1000)
+const id = contatore()
+
+setTimeout(() => clearInterval(id), 6000)
+
+// SNACK 7
 
 
 
