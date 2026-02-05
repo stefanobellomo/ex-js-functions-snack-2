@@ -83,7 +83,7 @@ setTimeout(() => clearInterval(id), 6000)
 
 function eseguiEferma(message, start, stop) {
     const id = setInterval(() => {
-        console.log(message);
+        // console.log(message);
     }, start)
 
     setTimeout(() => {
@@ -93,5 +93,19 @@ function eseguiEferma(message, start, stop) {
 
 const timer = eseguiEferma('questo è il messaggio', 1000, 5000)
 
+// SNACK 8
 
+function contoAllaRovescia(numb) {
+    const id = setInterval(() => {
+        console.log(numb);
+        numb--
 
+        if (numb === 0) {
+            clearInterval(id)
+            console.log('tempo scaduto');
+        }
+
+    }, 1000);
+}
+
+const intervallo = contoAllaRovescia(10)
