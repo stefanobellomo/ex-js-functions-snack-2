@@ -47,6 +47,19 @@ setTimeout(creaTimer, 4000)
 
 // SNACK 5
 
+function chiamami(messaggio) {
+    return setInterval(() => {
+        console.log(messaggio);
+    }, 1000)
+}
+
+const interval = chiamami('Ciao cane')
+
+setTimeout(() => {
+    clearInterval(interval)
+    console.log('fine messaggio')
+}, 5000)
+
 
 
 
